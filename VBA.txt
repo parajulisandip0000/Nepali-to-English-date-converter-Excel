@@ -1,0 +1,33 @@
+Function BSToAD(BSDate As String) As String
+    Dim yearBS As Integer
+    Dim monthBS As Integer
+    Dim dayBS As Integer
+    Dim yearAD As Integer
+    Dim monthAD As Integer
+    Dim dayAD As Integer
+
+    ' Split the BSDate into month, day, and year
+    Dim dateParts() As String
+    dateParts = Split(BSDate, "/")
+    monthBS = CInt(dateParts(0))
+    dayBS = CInt(dateParts(1))
+    yearBS = CInt(dateParts(2))
+
+    ' Approximate conversion
+    yearAD = yearBS - 56
+    monthAD = monthBS - 8
+
+    ' Adjust for negative month
+    If monthAD <= 0 Then
+        monthAD = monthAD + 12
+        yearAD = yearAD - 1
+    End If
+
+    ' Check and handle for zero day
+    If dayBS = 0 Then
+        dayBS = 1 ' Default to 1 if day is zero
+    End If
+
+    ' Format the AD date as a string
+    BSToAD = monthAD & "/" & dayBS & "/" & yearAD
+End Function
