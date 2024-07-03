@@ -9,11 +9,3 @@ Save, you can ctrl+s <br>
 Then go to excel <br>
 Assuming your BS date is in column D starting from cell D2, use the formula in the adjacent column (e.g., column E):<br>
 enter =BSToAD(D2) in the E column<br>
-
-
-<br><br>
-Patientid	 Age	Sex	    Nepali Date	AD Date
-*********    ** Y	****	4/22/2077	=BSToAD(D2)
-*********	 ** Y	****	6/13/2076	=BSToAD(D3)
-*********	 ** Y	****	6/28/2077	=BSToAD(D4)
-*********	 ** Y	****	5/25/2077	=BSToAD(D5)
